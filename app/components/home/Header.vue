@@ -15,7 +15,7 @@
         </div>
         <div class="header__showcase">Test</div>
         <div class="header__cta">
-            <button>Cliquez Ici</button>
+            <Button colourPrimary="#232323" colourSecondary="#f8d6ad"/>
         </div>
     </header>
 </template>
@@ -132,6 +132,7 @@
 
     &__cta {
         grid-column: 9 / 12;
+        place-self: center;
     }
 
     &__slider {

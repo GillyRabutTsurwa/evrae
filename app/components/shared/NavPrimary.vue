@@ -8,13 +8,13 @@
     <nav class="home-navigation__nav">
       <ul class="home-navigation__list">
         <li class="home-navigation__item">
-          <NuxtLink to="/blog" class="home-navigation__link">Blog</NuxtLink>
+          <NuxtLink to="https://github.com/GillyRabutTsurwa" class="home-navigation__link">Blog</NuxtLink>
         </li>
         <li class="home-navigation__item">
-          <NuxtLink to="/projects" class="home-navigation__link">Projects</NuxtLink>
+          <NuxtLink to="https://github.com/GillyRabutTsurwa" class="home-navigation__link">Projects</NuxtLink>
         </li>
         <li class="home-navigation__item">
-          <NuxtLink to="/shop" class="home-navigation__link">Shop</NuxtLink>
+          <NuxtLink to="https://github.com/GillyRabutTsurwa" class="home-navigation__link">Shop</NuxtLink>
         </li>
         <li class="home-navigation__item">
           <NuxtLink to="https://github.com/GillyRabutTsurwa" class="home-navigation__link">Github</NuxtLink>
