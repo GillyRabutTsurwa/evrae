@@ -1,8 +1,16 @@
 <script lang="ts" setup>
+import 'vue3-carousel/carousel.css'
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
+
+const carouselConfig = {
+  itemsToShow: 1,
+  wrapAround: true
+}
 </script>
 
 <template>
-    <section class="about">
+  <Carousel v-bind="carouselConfig" class="about">
+    <Slide v-for="slide in 10" :key="slide">
       <div class="item">
         <div class="item__text">
           <h2>Subtitle</h2>
@@ -10,11 +18,20 @@
         </div>
         <figure class="item__img"><img src="@/assets/images/project-thumbnails/planets-site-thumbnail.png" alt=""></figure>
       </div>
-    </section>
+    </Slide>
+
+    <template #addons>
+      <Navigation />
+      <Pagination />
+    </template>
+  </Carousel>
 </template>
 
 
 <style lang="scss">
+.carousel__viewport {
+  grid-column: 1 / -1;
+}
 .about {
   height: 60dvh;
   &,
