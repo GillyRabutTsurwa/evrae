@@ -1,4 +1,27 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const { assets } = useAssets();
+const { css, javascript, vue, svelte, react } = assets;
+//NOTE: juste pour le moment
+type Thumbnail = {
+    img: string;
+    siteLink: string;
+    githubLink: string;
+    isFavourite: boolean;
+};
+
+interface State {
+    assets: Array<Thumbnail>
+}
+
+const state: State  = reactive({
+    assets: [...assets.css, ...assets.javascript, ...assets.vue, ...assets.svelte, ...assets.react]
+});
+
+
+const randomAsset = computed(() => {
+    return state.assets[Math.floor(Math.random() * (state.assets.length))]
+});
+</script>
 
 <template>
     <header class="header tete">
@@ -13,7 +36,11 @@
         <div class="header__sub">
             <h2>Digital Elegance. Innovating the web experience and other stuff that cuzo will be responsible for putting here. </h2>
         </div>
-        <div class="header__showcase">Test</div>
+        <figure class="header__showcase">
+            <NuxtLink :to="randomAsset?.siteLink">
+                <img :src="randomAsset?.img" alt="">
+            </NuxtLink>
+        </figure>
         <div class="header__cta">
             <Button colourPrimary="#232323" colourSecondary="#f8d6ad"/>
         </div>
@@ -128,6 +155,10 @@
     &__showcase{
         grid-column: 5 / 9;
         background-color: $colour-secondary;
+
+        img {
+            width: 100%;
+        }
     }
 
     &__cta {
