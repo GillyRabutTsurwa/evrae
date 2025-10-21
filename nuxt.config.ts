@@ -4,7 +4,16 @@ export default defineNuxtConfig({
     devtools: { enabled: true },
 
     modules: ["@nuxt/fonts", "@nuxt/icon", "@nuxt/test-utils", "@nuxt/image"],
-
+    app: {
+        head: {
+            link: [
+                {
+                    rel: "stylesheet",
+                    href: "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css",
+                },
+            ],
+        },
+    },
     vite: {
         css: {
             preprocessorOptions: {
@@ -23,6 +32,57 @@ export default defineNuxtConfig({
             },
         },
     },
-
     css: ["@/assets/sass/main.scss"],
+    fonts: {
+        families: [
+            {
+                name: "PP Writer",
+                src: "/fonts/pp-writer/PPWriter-Thin.otf",
+                weight: 100,
+                style: "normal",
+            },
+            {
+                name: "PP Writer",
+                src: "/fonts/pp-writer/PPWriter-Regular.otf",
+                weight: 400,
+                style: "normal",
+            },
+            {
+                name: "PP Writer Text",
+                src: "/fonts/pp-writer/PPWriter-RegularText.otf",
+                weight: 400,
+                style: "normal",
+            },
+        ],
+    },
+    components: [
+        {
+            path: "~/components",
+            pathPrefix: false,
+        },
+        {
+            path: "~/components/blog",
+            pathPrefix: false,
+        },
+        {
+            path: "~/components/global",
+            pathPrefix: false,
+        },
+        {
+            path: "~/components/home",
+            pathPrefix: false,
+        },
+        {
+            path: "~/components/layout",
+            pathPrefix: false,
+        },
+        {
+            path: "~/components/shared",
+            pathPrefix: false,
+        },
+        {
+            path: "~/components/shop",
+            pathPrefix: false,
+        },
+    ],
 });
