@@ -5,6 +5,7 @@
     <NavPrimary/>
     <Header/>
     <About/>
+    <Tools/>
 </template>
 
 <style scoped>

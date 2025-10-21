@@ -33,21 +33,23 @@ const carouselConfig = {
   grid-column: 1 / -1;
 }
 .about {
-  height: 60dvh;
-  &,
-  .item {
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: subgrid;
-  }
+  min-height: 60dvh;
+  background-color: $colour-secondary;
+  color: $colour-primary;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: subgrid;
 
   .item {
+    display: flex;
+    height: 100%;
+
     &__text {
-      grid-column: 2 / 6;
+      flex: 1 0 50vw;
     }
   
     &__img {
-      grid-column: 7 / 12;
+      flex-basis: 1 0 50vw;
       
       img {
         width: 100%;
