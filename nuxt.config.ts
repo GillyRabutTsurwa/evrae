@@ -27,6 +27,7 @@ export default defineNuxtConfig({
                   @use "@/assets/sass/base/_base.scss" as *;
                   @use "@/assets/sass/base/_reset.scss" as *;
                   @use "@/assets/sass/base/_typography.scss" as *;
+                  @use "@/assets/sass/layouts/_primary.scss" as *;
                   `,
                 },
             },

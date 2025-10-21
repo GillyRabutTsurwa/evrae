@@ -2,8 +2,9 @@
 </script>
 
 <template>
-    <NavPrimary />
-    <Header />
+    <NavPrimary/>
+    <Header/>
+    <About/>
 </template>
 
 <style scoped>

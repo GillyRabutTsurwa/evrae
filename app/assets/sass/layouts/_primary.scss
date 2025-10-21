@@ -1,10 +1,5 @@
 .corps {
-    // min-height: 100dvh; //TESTING
-    // background-color: cornflowerblue;
-
-    // display: grid;
-    // grid-template-rows: 80vh -webkit-min-content 40vw repeat(3, -webkit-min-content);
-    // grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
-    // grid-template-columns: 1rem repeat(10 minmax(-webkit-min-content, 15rem)) 1fr;
-    // grid-template-columns: 1rem repeat(10 minmax(min-content, 15rem)) 1fr;
+    display: grid;
+    grid-template-columns: 1fr repeat(10, minmax(-webkit-min-content, 14rem)) 1fr;
+    grid-template-columns: 1fr repeat(10, minmax(min-content, 14rem)) 1fr;
 }

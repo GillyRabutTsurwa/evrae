@@ -23,11 +23,12 @@
 <style lang="scss" scoped>
 .header {
     // min-height: 100vh; // on le ramene
-    width: 100%;
+    grid-column: 1 / -1;
     position: relative;
     display: grid;
     grid-template-rows: 65dvh 35dvh;
-    grid-template-columns: 1fr repeat(10, minmax(min-content, 14rem)) 1fr;
+    grid-template-columns: subgrid;
+    // grid-template-columns: 1fr repeat(10, minmax(min-content, 14rem)) 1fr;
     // background-color: $colour-primary;
 
     @include breakpoint(1023) {
