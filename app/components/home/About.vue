@@ -67,7 +67,7 @@ const carouselConfig = {
     }
 
     &__img {
-      flex-basis: 1 0 50vw;
+      flex: 1 0 50vw;
       
       img {
         width: 100%;
