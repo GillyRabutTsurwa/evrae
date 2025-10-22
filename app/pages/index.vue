@@ -5,6 +5,7 @@
     <NavPrimary/>
     <Header/>
     <About/>
+    <Services/>
     <Tools/>
 </template>
 

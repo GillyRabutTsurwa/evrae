@@ -63,9 +63,10 @@
     display: grid;
     grid-template-rows: repeat(6, min-content);
     grid-template-columns: subgrid;
-    height: 100dvh;
+    padding: 4rem 0;
     // overflow: hidden;
-    background-color: $colour-primary;
+    background-color: $colour-secondary;
+    color: $colour-primary;
     // padding: 7rem 0;
 
     & > * {
@@ -76,7 +77,7 @@
 :is(h2, h3) {
     // margin: 2rem 0;
     text-align: center;
-    color: $colour-secondary;
+    // color: $colour-primary;
 }
 
 h2 {
@@ -94,7 +95,7 @@ h4 {
 
 i {
     font-size: 15rem;
-    color: $colour-secondary;
+    // color: $colour-primary;
 }
 
 .vue3-marquee {
