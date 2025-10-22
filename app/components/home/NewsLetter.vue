@@ -22,7 +22,7 @@
   padding: 4rem;
 
   & > * {
-    grid-column: 6 / 7;
+    grid-column: 5 / 8;
   }
 
   &__title {

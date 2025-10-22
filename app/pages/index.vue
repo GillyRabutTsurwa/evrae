@@ -8,6 +8,7 @@
     <Services/>
     <Tools/>
     <NewsLetter/>
+    <Footer/>
 </template>
 
 <style lang="scss" scoped>

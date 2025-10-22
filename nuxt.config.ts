@@ -12,6 +12,12 @@ export default defineNuxtConfig({
                     href: "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css",
                 },
             ],
+            script: [
+                {
+                    src: "https://kit.fontawesome.com/7a26a17053.js",
+                    crossorigin: "anonymous",
+                },
+            ],
         },
     },
     vite: {
@@ -61,10 +67,10 @@ export default defineNuxtConfig({
             path: "~/components",
             pathPrefix: false,
         },
-        {
-            path: "~/components/blog",
-            pathPrefix: false,
-        },
+        // {
+        //     path: "~/components/blog",
+        //     pathPrefix: false,
+        // },
         {
             path: "~/components/global",
             pathPrefix: false,
@@ -73,17 +79,17 @@ export default defineNuxtConfig({
             path: "~/components/home",
             pathPrefix: false,
         },
-        {
-            path: "~/components/layout",
-            pathPrefix: false,
-        },
+        // {
+        //     path: "~/components/layout",
+        //     pathPrefix: false,
+        // },
         {
             path: "~/components/shared",
             pathPrefix: false,
         },
-        {
-            path: "~/components/shop",
-            pathPrefix: false,
-        },
+        // {
+        //     path: "~/components/shop",
+        //     pathPrefix: false,
+        // },
     ],
 });

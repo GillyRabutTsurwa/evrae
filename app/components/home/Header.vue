@@ -60,14 +60,13 @@ function shuffle<T>(array: Array<T>): Array<T> {
         </figure>
         <div class="header__title">
             <h1 class="header__title--primary">Evræ</h1>
-            <!-- <h2 class="header__title--secondary">Digital Elegance</h2> -->
         </div>
         <div class="header__sub">
             <h2>Digital Elegance. Innovating the web experience and other stuff that cuzo will be responsible for putting here. </h2>
         </div>
         <Carousel v-bind="carouselConfig" class="header__showcase">
             <Slide v-for="currentPortrait in showcaseAssets">
-                <figure>
+                <figure class="header__showcase--img">
                    <NuxtLink :to="currentPortrait?.siteLink">
                        <img :src="currentPortrait?.img" alt="">
                     </NuxtLink>
@@ -189,8 +188,24 @@ function shuffle<T>(array: Array<T>): Array<T> {
         grid-column: 5 / 9;
         background-color: $colour-secondary;
 
-        img {
+        &--img {
             width: 100%;
+            height: 100%;
+
+            a,
+            img {
+                width: 100%;
+                height: 100%;
+            }
+            
+            a {
+                display: inline-block;
+            }
+
+            img {
+                object-fit: cover;
+                -o-object-fit: cover;
+            }
         }
     }
 

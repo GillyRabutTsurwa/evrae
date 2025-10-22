@@ -6,7 +6,7 @@
   <section class="services">
     <Card>
       <template #title>
-        Gil's Card
+        Something
       </template>
       <template #content>
         <p>Guten tag this is the thing that i will be making.</p>
@@ -14,7 +14,7 @@
     </Card>
     <Card>
       <template #title>
-        Cuzo's Card
+        Here
       </template>
       <template #content>
         <p>utapata udaku tu hapa. hakuna kitu kingine.</p>
@@ -22,7 +22,7 @@
     </Card>
     <Card>
       <template #title>
-        Our Card
+        Later
       </template>
       <template #content>
         <p>ça c'est notre carte. on va faire beaucoup de bonnes choses dans ce site.</p>
