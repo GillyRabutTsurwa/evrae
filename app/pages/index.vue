@@ -7,7 +7,8 @@
     <About/>
     <Services/>
     <Tools/>
+    <NewsLetter/>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 </style>
