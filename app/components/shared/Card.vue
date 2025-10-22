@@ -5,13 +5,15 @@
 <template>
   <div class="card">
     <div class="card__front">
-        <figure class="card__front--image"></figure>
+        <figure class="card__front--image">
+          <slot name="image"></slot>
+        </figure>
         <div class="card__front--title">
           <slot name="title"></slot>
         </div>
     </div>
     <div class="card__back">
-      <slot name="content"></slot>
+      <slot name="content">fallback</slot>
     </div>
   </div>
 </template>
@@ -54,8 +56,8 @@
 }
 
 .card__back {
-	background-image: -webkit-gradient(linear, left top, right bottom, from(rgb(130, 240, 139)), to(rgb(29, 210, 223)));
-	background-image: linear-gradient(to right bottom, rgb(130, 240, 139), rgb(29, 210, 223));
+	background-image: -webkit-gradient(linear, left top, right bottom, from($colour-secondary), to($colour-primary));
+	background-image: linear-gradient(to right bottom, $colour-secondary, $colour-primary);
 	-webkit-transform: rotateY(180deg);
 	transform: rotateY(180deg);
 }
@@ -76,10 +78,10 @@
 	width: 100%;
 	height: 90%;
 	/* background-image: url(./Wun\ Two\ -\ Seasons\ \(2016\).jpg); */
-	background-image: url(natours-thumbnail.png);
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
+	// background-size: cover;
+	// background-position: center;
+	// background-repeat: no-repeat;
+
 }
 
 .card__front--title {

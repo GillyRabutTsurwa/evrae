@@ -74,7 +74,7 @@ function shuffle<T>(array: Array<T>): Array<T> {
             </Slide> 
         </Carousel>
         <div class="header__cta">
-            <Button colourPrimary="#232323" colourSecondary="#f8d6ad"/>
+            <Button colourPrimary="#191919" colourSecondary="#f7f3e8"/>
         </div>
     </header>
 </template>
@@ -197,7 +197,7 @@ function shuffle<T>(array: Array<T>): Array<T> {
                 width: 100%;
                 height: 100%;
             }
-            
+
             a {
                 display: inline-block;
             }

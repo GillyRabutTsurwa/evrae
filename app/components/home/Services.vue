@@ -5,6 +5,9 @@
 <template>
   <section class="services">
     <Card>
+      <template #image>
+        <img src="@/assets/images/project-thumbnails/arch-studio-thumbnail.png" alt="">
+      </template>
       <template #title>
         Something
       </template>
@@ -13,6 +16,9 @@
       </template>
     </Card>
     <Card>
+      <template #image>
+        <img src="@/assets/images/project-thumbnails/arch-studio-thumbnail.png" alt="">
+      </template>
       <template #title>
         Here
       </template>
@@ -21,6 +27,9 @@
       </template>
     </Card>
     <Card>
+      <template #image>
+        <img src="@/assets/images/project-thumbnails/arch-studio-thumbnail.png" alt=""></img>
+      </template>
       <template #title>
         Later
       </template>
@@ -38,5 +47,10 @@
   display: flex;
   justify-content: space-around;
 
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 </style>
