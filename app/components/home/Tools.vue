@@ -4,12 +4,14 @@
 
 <template>
     <section class="marquee-container">
-        <h2>What I Use</h2>
-        <h3>Front-End</h3>
+        <h2>Tools & Skills</h2>
         <ClientOnly>
-            <Vue3Marquee :duration="90" pauseOnHover>
-                <i class="devicon-tailwindcss-plain"></i>
+            <Vue3Marquee :duration="90" direction="reverse" pauseOnHover>
+                <i class="devicon-wordpress-plain"></i>
+                <i class="devicon-sanity-plain"></i>
+                <i class="devicon-css3-plain"></i>
                 <i class="devicon-sass-plain"></i>
+                <i class="devicon-tailwindcss-plain"></i>
                 <i class="devicon-javascript-plain"></i>
                 <i class="devicon-vuejs-plain"></i>
                 <i class="devicon-nuxtjs-plain"></i>
@@ -17,12 +19,8 @@
                 <i class="devicon-svelte-plain"></i>
                 <i class="devicon-react-plain"></i>
                 <i class="devicon-webpack-plain"></i>
-                <i class="devicon-wordpress-plain"></i>
                 <i class="devicon-storybook-plain"></i>
                 <i class="devicon-jest-plain"></i>
-            </Vue3Marquee>
-            <h3>Back-End</h3>
-            <Vue3Marquee :duration="90" direction="reverse" pauseOnHover>
                 <i class="devicon-nodejs-plain"></i>
                 <i class="devicon-express-original"></i>
                 <i class="devicon-mongodb-plain"></i>
@@ -32,7 +30,12 @@
                 <i class="devicon-postman-plain"></i>
                 <i class="devicon-supabase-plain"></i>
             </Vue3Marquee>
-            <h3>Other</h3>
+            <Vue3Marquee :duration="90" pauseOnHover>
+                <h4>web development</h4>
+                <h4>web design</h4>
+                <h4>content management</h4>
+                <h4>professional writing</h4>
+            </Vue3Marquee>
             <Vue3Marquee :duration="90" pauseOnHover>
                 <i class="devicon-git-plain"></i>
                 <i class="devicon-github-plain"></i>
@@ -82,6 +85,11 @@ h2 {
 
 h3 {
     font-size: 3rem;
+}
+
+h4 {
+    font-size: 12rem;
+    margin-inline: 10px
 }
 
 i {
