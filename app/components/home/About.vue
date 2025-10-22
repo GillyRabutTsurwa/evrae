@@ -9,7 +9,9 @@ const selectedPortraits = computed(() => portraits.filter((currentPortrait) => c
 
 const carouselConfig = {
   itemsToShow: 1,
-  wrapAround: true
+  wrapAround: true,
+  // autoplay: 10000,
+  // pauseAutoplayOnHover: true
 }
 </script>
 

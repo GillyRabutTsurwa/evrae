@@ -1,6 +1,9 @@
 <script setup lang="ts">
+import "vue3-carousel/carousel.css";
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
+
 const { assets } = useAssets();
-const { css, javascript, vue, svelte, react } = assets;
+const { css, javascript, vue, svelte, react, portraits } = assets;
 //NOTE: juste pour le moment
 type Thumbnail = {
     img: string;
@@ -13,14 +16,40 @@ interface State {
     assets: Array<Thumbnail>
 }
 
+const carouselConfig = {
+  itemsToShow: 1,
+  wrapAround: true,
+  autoplay: 10000,
+  pauseAutoplayOnHover: true,
+}
+
 const state: State  = reactive({
-    assets: [...assets.css, ...assets.javascript, ...assets.vue, ...assets.svelte, ...assets.react]
+    assets: [...assets.css, ...assets.javascript, ...assets.vue, ...assets.svelte, ...assets.react, ...assets.portraits]
 });
 
 
-const randomAsset = computed(() => {
-    return state.assets[Math.floor(Math.random() * (state.assets.length))]
+const showcaseAssets = computed(() => {
+    return shuffle(state.assets.filter((currentAsset) => currentAsset.isFavourite));
 });
+
+function shuffle<T>(array: Array<T>): Array<T> {
+  let currentIndex = array.length;
+
+  // While there remain elements to shuffle...
+  while (currentIndex != 0) {
+
+    // Pick a remaining element...
+    let randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+
+  return array;
+}
+
 </script>
 
 <template>
@@ -36,11 +65,15 @@ const randomAsset = computed(() => {
         <div class="header__sub">
             <h2>Digital Elegance. Innovating the web experience and other stuff that cuzo will be responsible for putting here. </h2>
         </div>
-        <figure class="header__showcase">
-            <NuxtLink :to="randomAsset?.siteLink">
-                <img :src="randomAsset?.img" alt="">
-            </NuxtLink>
-        </figure>
+        <Carousel v-bind="carouselConfig" class="header__showcase">
+            <Slide v-for="currentPortrait in showcaseAssets">
+                <figure>
+                   <NuxtLink :to="currentPortrait?.siteLink">
+                       <img :src="currentPortrait?.img" alt="">
+                    </NuxtLink>
+                </figure>
+            </Slide> 
+        </Carousel>
         <div class="header__cta">
             <Button colourPrimary="#232323" colourSecondary="#f8d6ad"/>
         </div>

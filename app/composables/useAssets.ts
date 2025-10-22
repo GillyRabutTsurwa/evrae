@@ -68,7 +68,7 @@ const thumbnailCSS: Array<Thumbnail> = [
         img: trillo,
         siteLink: "https://trillo-gilberttsurwa-jonas.netlify.com/",
         githubLink: "https://github.com/GillyRabutTsurwa/trillo-jonas",
-        isFavourite: false,
+        isFavourite: true,
     },
     {
         img: nexter,
@@ -80,19 +80,19 @@ const thumbnailCSS: Array<Thumbnail> = [
         img: candyMuseum,
         siteLink: "https://candymuseum-gilberttsurwa-colt.netlify.app",
         githubLink: "https://github.com/GillyRabutTsurwa/candymuseum-colt",
-        isFavourite: false,
+        isFavourite: true,
     },
     {
         img: phono,
         siteLink: "https://first-deployed-website.netlify.com",
         githubLink: "https://github.com/GillyRabutTsurwa/phono-headphones-website",
-        isFavourite: false,
+        isFavourite: true,
     },
     {
         img: grandmaSweets,
         siteLink: "https://grandmassweets-gilberttsurwa-codeaddict.netlify.com",
         githubLink: "https://github.com/GillyRabutTsurwa/grandma-sweets-codeaddict",
-        isFavourite: false,
+        isFavourite: true,
     },
 ];
 // =====================================
@@ -212,7 +212,7 @@ const thumbnailSvelte: Array<Thumbnail> = [
         img: jobsDashboard,
         siteLink: "https://jobs-dashboard-nu.vercel.app/",
         githubLink: "https://github.com/GillyRabutTsurwa/jobs-dashboard",
-        isFavourite: true,
+        isFavourite: false,
     },
     {
         img: whitneyVanessa,
@@ -227,7 +227,7 @@ const portraits: Array<Thumbnail> = [
         img: me,
         siteLink: "https://gilberrabuttsurwa.com",
         githubLink: "https://github.com/GillyRabutTsurwa",
-        isFavourite: true,
+        isFavourite: false,
     },
     {
         img: meSketch,
@@ -245,13 +245,13 @@ const portraits: Array<Thumbnail> = [
         img: cuzo,
         siteLink: "https://whitneyvanessa.com",
         githubLink: "https://github.com/GillyRabutTsurwa",
-        isFavourite: true,
+        isFavourite: false,
     },
     {
         img: cuzoSketch,
         siteLink: "https://whitneyvanessa.com",
         githubLink: "https://github.com/GillyRabutTsurwa",
-        isFavourite: true,
+        isFavourite: false,
     },
     {
         img: cuzoSketchColoured,
