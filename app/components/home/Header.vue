@@ -81,37 +81,6 @@ function shuffle<T>(array: Array<T>): Array<T> {
 
 <style lang="scss" scoped>
 .header {
-    // min-height: 100vh; // on le ramene
-    grid-column: 1 / -1;
-    position: relative;
-    display: grid;
-    grid-template-rows: 65dvh 35dvh;
-    grid-template-columns: subgrid;
-    // grid-template-columns: 1fr repeat(10, minmax(min-content, 14rem)) 1fr;
-    // background-color: $colour-primary;
-
-    @include breakpoint(1023) {
-        min-height: max-content;
-        padding-bottom: 3rem;
-        place-items: center;
-        grid-template-columns: 1fr;
-        grid-auto-rows: min-content;
-        // order: 1; //NOTE: this works because i display the parent (#app) to be display: grid in pages/index.vue
-    }
-
-    // TESTING
-    & .icon {
-        align-self: center;
-        grid-column: 2 / 3;
-        transform: translateX(-10rem);
-        // transform: translate(-10rem, -5rem); // deplacer vers le gauche juste un peu na juu kidogo
-
-        @include breakpoint(1023) {
-            grid-column: 1 / 2; //NOTE; reinitialise la configuration dessus
-            transform: translateX(0);
-        }
-    }
-
     &__logo {
         display: inline-block;
         position: absolute;
@@ -132,14 +101,10 @@ function shuffle<T>(array: Array<T>): Array<T> {
     }
 
     &__title {
-        grid-column: 1 / -1;
-        place-self: center;
-        // text-align: center;
-        z-index: 1000;
         color: $colour-secondary;
 
         @include breakpoint(1023) {
-            padding-right: unset; //NOTE: so this does work. same as padding-right: 0;
+            padding-right: unset;
             margin-top: 12rem;
         }
 
@@ -151,8 +116,6 @@ function shuffle<T>(array: Array<T>): Array<T> {
         &--primary {
             font-size: 27.5rem;
             font-weight: 600;
-            // padding-bottom: 2rem;
-            //TESTING
             opacity: 1;
             transition: all 2.5s ease;
 
@@ -163,15 +126,6 @@ function shuffle<T>(array: Array<T>): Array<T> {
 
             span {
                 margin-right: 4rem;
-
-                //NOTE: not sure if i want this yet
-                // &:nth-of-type(2) {
-                //     margin-left: 15rem;
-                // }
-
-                // &:nth-of-type(3) {
-                //     margin-left: 40rem;
-                // }
             }
         }
 
@@ -180,12 +134,7 @@ function shuffle<T>(array: Array<T>): Array<T> {
         }
     }
 
-    &__sub {
-        grid-column: 2 / 5;
-    }
-
     &__showcase{
-        grid-column: 5 / 9;
         background-color: $colour-secondary;
 
         &--img {
@@ -209,11 +158,6 @@ function shuffle<T>(array: Array<T>): Array<T> {
         }
     }
 
-    &__cta {
-        grid-column: 9 / 12;
-        place-self: center;
-    }
-
     &__slider {
         height: 100%;
         width: 100%;
@@ -232,7 +176,6 @@ function shuffle<T>(array: Array<T>): Array<T> {
     }
 }
 
-// header animation
 @keyframes fade-title {
     from {
         opacity: 0;

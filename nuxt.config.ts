@@ -25,7 +25,9 @@ export default defineNuxtConfig({
             preprocessorOptions: {
                 scss: {
                     additionalData: `
+                  @use "@/assets/sass/abstracts/_colours.scss" as *;
                   @use "@/assets/sass/abstracts/_extends.scss" as *; 
+                  @use "@/assets/sass/abstracts/_fonts.scss" as *;
                   @use "@/assets/sass/abstracts/_functions.scss" as *;
                   @use "@/assets/sass/abstracts/_mixins.scss" as *;
                   @use "@/assets/sass/abstracts/_variables.scss" as *;
@@ -33,6 +35,7 @@ export default defineNuxtConfig({
                   @use "@/assets/sass/base/_base.scss" as *;
                   @use "@/assets/sass/base/_reset.scss" as *;
                   @use "@/assets/sass/base/_typography.scss" as *;
+                  @use "@/assets/sass/components/_header.scss" as *;
                   @use "@/assets/sass/layouts/_primary.scss" as *;
                   `,
                 },

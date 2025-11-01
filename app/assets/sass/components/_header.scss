@@ -1,0 +1,48 @@
+@use "../abstracts/" as abstracts;
+
+.header {
+    grid-column: 1 / -1;
+    position: relative;
+    display: grid;
+    grid-template-rows: 65dvh 35dvh;
+    grid-template-columns: subgrid;
+
+    @include abstracts.breakpoint(1023) {
+        min-height: -webkit-max-content;
+        min-height: -moz-max-content;
+        min-height: max-content;
+        padding-bottom: 3rem;
+        place-items: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: revert;
+        -moz-row-gap: 2rem;
+        row-gap: 2rem;
+    }
+
+    &__title {
+        grid-column: 1 / -1;
+        place-self: center;
+    }
+
+    &__sub {
+        grid-column: 2 / 5;
+    }
+
+    &__showcase {
+        grid-column: 5 / 9;
+    }
+
+    &__cta {
+        grid-column: 9 / 12;
+        place-self: center;
+    }
+
+    &__title,
+    &__sub,
+    &__showcase,
+    &__cta {
+        @include abstracts.breakpoint(1023) {
+            grid-column: 1 / -1;
+        }
+    }
+}
