@@ -89,7 +89,7 @@ const currentYear: ComputedRef<number> = computed(() => {
 .footer {
   // position: relative;
   grid-column: 1 / -1;
-  width: 100%;
+  width: 100dvw;
   padding: 20rem 10rem;
 
   display: grid;

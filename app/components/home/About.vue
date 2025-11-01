@@ -70,6 +70,11 @@ const carouselConfig = {
 
     &__img {
       flex: 1 0 50vw;
+
+      @include breakpoint(1023) {
+        display: none;
+        visibility: hidden;
+      }
       
       img {
         width: 100%;

@@ -134,6 +134,13 @@ function shuffle<T>(array: Array<T>): Array<T> {
         }
     }
 
+    &__sub {
+        @include breakpoint(1023) {
+            padding-inline: 5rem;
+            text-align: center;
+        }
+    }
+
     &__showcase{
         background-color: $colour-secondary;
 
