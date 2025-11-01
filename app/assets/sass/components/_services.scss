@@ -1,0 +1,11 @@
+@use "../abstracts/" as abstracts;
+
+.services {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-around;
+
+    @include abstracts.breakpoint(1023) {
+        flex-direction: column;
+    }
+}

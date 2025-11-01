@@ -43,10 +43,6 @@
 
 <style lang="scss" scoped>
 .services {
-  grid-column: 1 / -1;
-  display: flex;
-  justify-content: space-around;
-
   img {
     width: 100%;
     height: 100%;
