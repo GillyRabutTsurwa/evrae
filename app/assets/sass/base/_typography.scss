@@ -2,6 +2,18 @@
 
 html {
     font-size: abstracts.$font-size-root;
+
+    @include abstracts.breakpoint(1023) {
+        font-size: abstracts.$font-size-root-medium;
+    }
+
+    @include abstracts.breakpoint(767) {
+        font-size: abstracts.$font-size-root-small;
+    }
+
+    @include abstracts.breakpoint(480) {
+        font-size: abstracts.$font-size-root-extra-small;
+    }
 }
 
 body {

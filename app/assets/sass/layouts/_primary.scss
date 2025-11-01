@@ -4,4 +4,8 @@
     display: grid;
     grid-template-columns: 1fr repeat(10, minmax(-webkit-min-content, 14rem)) 1fr;
     grid-template-columns: 1fr repeat(10, minmax(min-content, 14rem)) 1fr;
+
+    @include abstracts.breakpoint(1023) {
+        grid-template-columns: 1fr;
+    }
 }

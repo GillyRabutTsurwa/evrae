@@ -1,3 +1,6 @@
 $font-family-primary: "PP Writer", sans-serif;
-$font-size-root: 62.5%;
+$font-size-root: 62.5%; // 1rem = 10px; 10px/16px = 62.5%
+$font-size-root-medium: 56.25%; // 1rem = 9px; 9px/16px = 56.25%
+$font-size-root-small: 50%; // 1rem = 8px; 9px/16px = 56.25%
+$font-size-root-extra-small: 45%;
 $font-size-main: 1.6rem;

@@ -24,7 +24,7 @@
 // here is where i found it: http://sassbreak.com/flexible-media-query-mixins/
 
 @mixin breakpoint($breakpointUnit, $min-max: max-width) {
-    $baseFont: 16;
+    $baseFont: 16; // in px
     //NOTE: min-width would also work in this case NOTE: min-max is a default parametre
     $em: calc($breakpointUnit / $baseFont);
     // NOTE: so if i was aiming for a breakpoint of 900px, it would take 900/16 and that would be the em unit used in the media query
