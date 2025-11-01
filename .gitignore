@@ -28,3 +28,6 @@ bun.lock
 
 # Local Netlify folder
 .netlify
+
+# VSCode folder
+.vscode
