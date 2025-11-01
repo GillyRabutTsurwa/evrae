@@ -74,7 +74,7 @@ function shuffle<T>(array: Array<T>): Array<T> {
             </Slide> 
         </Carousel>
         <div class="header__cta">
-            <Button colourPrimary="#191919" colourSecondary="#f7f3e8"/>
+            <Button text="Browse Projects" colourPrimary="#191919" colourSecondary="#f7f3e8" isLink isExternal path="https://gilbertrabuttsurwa.com/projects"/>
         </div>
     </header>
 </template>
