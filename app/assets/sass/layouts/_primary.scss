@@ -1,3 +1,5 @@
+@use "../abstracts/" as abstracts;
+
 .corps {
     display: grid;
     grid-template-columns: 1fr repeat(10, minmax(-webkit-min-content, 14rem)) 1fr;

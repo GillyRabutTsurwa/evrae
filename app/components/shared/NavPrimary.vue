@@ -49,8 +49,8 @@
     right: 3rem;
     border-radius: 50%;
     z-index: 20000;
-    -webkit-box-shadow: 0 1rem 3rem rgba($colour-noir, 0.1);
-    box-shadow: 0 1rem 3rem rgba($colour-noir, 0.1);
+    -webkit-box-shadow: 0 1rem 3rem rgba($colour-secondary, 0.1);
+    box-shadow: 0 1rem 3rem rgba($colour-secondary, 0.1);
     text-align: center;
     cursor: pointer;
 
@@ -72,7 +72,6 @@
     position: fixed;
     top: 3.5rem;
     right: 3.5rem;
-    // background-image: radial-gradient($colour-primary, $steelblue);
     background-image: radial-gradient($colour-secondary, $colour-secondary);
 
     z-index: 10000;

@@ -1,0 +1,10 @@
+@use "../abstracts/" as abstracts;
+
+html {
+    font-size: abstracts.$font-size-root;
+}
+
+body {
+    font-family: abstracts.$font-family-primary;
+    font-size: abstracts.$font-size-main;
+}
