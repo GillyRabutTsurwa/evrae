@@ -1,31 +1,92 @@
 {
     "name": "evrae",
-    "type": "module",
-    "private": true,
+    "version": "1.0.0",
+    "description": "evrae site and studio",
+    "main": "index.js",
     "scripts": {
-        "build": "nuxt build",
-        "dev": "nuxt dev",
-        "dev-https": "nuxt dev --https --ssl-cert localhost.pem --ssl-key localhost-key.pem",
-        "generate": "nuxt generate",
-        "preview": "nuxt preview",
-        "postinstall": "nuxt prepare"
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "dependencies": {
-        "@nuxt/fonts": "^0.12.1",
-        "@nuxt/hints": "^1.0.0-alpha.2",
-        "@nuxt/icon": "^2.1.0",
-        "@nuxt/image": "^2.0.0",
-        "@nuxt/test-utils": "^3.20.1",
-        "nuxt": "^4.2.1",
-        "vue": "^3.5.25",
-        "vue-router": "^4.6.3",
-        "vue3-carousel": "^0.17.0",
-        "vue3-marquee": "^4.2.2"
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/GillyRabutTsurwa/evrae.git"
     },
+    "keywords": [
+        "evrae",
+        "site",
+        "cms",
+        "sanity",
+        "nuxt"
+    ],
+    "author": "Gilbert Rabut Tsurwa",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/GillyRabutTsurwa/evrae/issues"
+    },
+    "homepage": "https://github.com/GillyRabutTsurwa/evrae#readme",
     "devDependencies": {
         "@release-it/conventional-changelog": "^10.0.2",
-        "release-it": "^19.0.6",
-        "sass": "^1.94.2",
-        "sass-loader": "^16.0.6"
+        "@types/node": "^24.10.1",
+        "dotenv-cli": "^11.0.0",
+        "npm-run-all": "^4.1.5",
+        "release-it": "^19.0.6"
+    },
+    "release-it": {
+        "git": {
+            "commitMessage": "chore: release v${version}"
+        },
+        "github": {
+            "release": true
+        },
+        "npm": {
+            "publish": false
+        },
+        "plugins": {
+            "@release-it/conventional-changelog": {
+                "infile": "CHANGELOG.md",
+                "preset": {
+                    "name": "conventionalcommits",
+                    "types": [
+                        {
+                            "type": "feat",
+                            "section": "Features"
+                        },
+                        {
+                            "type": "fix",
+                            "section": "Bug Fixes"
+                        },
+                        {
+                            "type": "docs",
+                            "section": "Documentation"
+                        },
+                        {
+                            "type": "style",
+                            "section": "Code Style",
+                            "hidden": true
+                        },
+                        {
+                            "type": "refactor",
+                            "section": "Refactoring"
+                        },
+                        {
+                            "type": "perfomance",
+                            "section": "Performance Improvements"
+                        },
+                        {
+                            "type": "test",
+                            "section": "Tests",
+                            "hidden": true
+                        },
+                        {
+                            "type": "chore",
+                            "section": "Chores",
+                            "hidden": true
+                        }
+                    ]
+                }
+            }
+        },
+        "hooks": {
+            "after:bump": "tsx scripts/update-workspace-versions.ts"
+        }
     }
 }
