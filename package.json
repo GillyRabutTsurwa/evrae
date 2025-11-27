@@ -4,7 +4,13 @@
     "description": "evrae site and studio",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "dev": "npm-run-all --parallel dev:*",
+        "build": "npm-run-all --parallel build:*",
+        "dev:site": "npm run dev-https --prefix=site",
+        "dev:studio": "npm run dev --prefix=content",
+        "build:site": "npm run build --prefix=site",
+        "build:studio": "npm run build --prefix=studio",
+        "release": "dotenv release-it --"
     },
     "repository": {
         "type": "git",
