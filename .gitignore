@@ -23,7 +23,10 @@ logs
 .env.*
 !.env.example
 
-bun.lock
+npm lock file
+package-lock.json
+
+https keys
 *.pem
 
 # Local Netlify folder
