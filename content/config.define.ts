@@ -29,12 +29,12 @@ export const settings = (envName: string, envID: string = "g014cs9v", envTheme: 
             title: "Netlify Deploys",
             sites: [
               {
-                title: "gilbertrabuttsurwa",
-                apiId: "167eb826-c028-4b19-b0f3-888d57c5e1cb",
+                title: "evræ",
+                apiId: "17522521-ce15-47d1-9288-36141d48a17f",
                 buildHookId: "692a0f6a5e97e0284483da67",
-                name: "rabuttsurwa",
+                name: "evrae",
                 branch: "master",
-                url: "https://gilbertrabuttsurwa.com",
+                url: "https://evrae.io",
               },
             ],
           }),
