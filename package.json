@@ -1,5 +1,5 @@
 {
-    "name": "gilbertrabuttsurwa",
+    "name": "evrae",
     "version": "1.0.4",
     "description": "my website project which containts my nuxt app and my sanity studio",
     "main": "index.js",
@@ -14,7 +14,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/GillyRabutTsurwa/gilbertrabuttsurwa.git"
+        "url": "git+https://github.com/GillyRabutTsurwa/evrae.git"
     },
     "keywords": [
         "nuxt",
@@ -25,9 +25,9 @@
     "author": "Gilbert Rabut Tsurwa",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/GillyRabutTsurwa/gilbertrabuttsurwa/issues"
+        "url": "https://github.com/GillyRabutTsurwa/evrae/issues"
     },
-    "homepage": "https://github.com/GillyRabutTsurwa/gilbertrabuttsurwa#readme",
+    "homepage": "https://github.com/GillyRabutTsurwa/evrae#readme",
     "devDependencies": {
         "@release-it/conventional-changelog": "^10.0.1",
         "@types/node": "^24.10.0",
