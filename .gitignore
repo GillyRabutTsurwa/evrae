@@ -1,6 +1,6 @@
 .env
 package-lock.json
-CHANGELOG.md
+# CHANGELOG.md
 
 .netlify
 .vscode
