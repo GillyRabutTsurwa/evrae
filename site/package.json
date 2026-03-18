@@ -43,6 +43,7 @@
     "pinia": "^3.0.3",
     "sanity": "^4.15.0",
     "stripe": "^18.4.0",
+    "styled-components": "^6.3.11",
     "typescript": "^5.9.2",
     "vue3-carousel": "^0.16.0",
     "vue3-marquee": "^4.2.2"
