@@ -57,7 +57,55 @@ console.log(currentItems.value);
 </script>
 
 <template>
-  <Featured />
+  <Navigation>
+    <template #logo>
+      <LogoX />
+    </template>
+    <template #links>
+      <li class="navigation__list--item">
+        <NuxtLink to="/library/games">Games</NuxtLink>
+      </li>
+      <li class="navigation__list--item">
+        <NuxtLink to="/library/anime">Anime</NuxtLink>
+      </li>
+      <li class="navigation__list--item">
+        <NuxtLink to="/library/anime/explore">Explore Anime</NuxtLink>
+      </li>
+      <DevOnly>
+        <li class="navigation__list--item">
+          <NuxtLink to="/library/games/explore">Explore Games</NuxtLink>
+        </li>
+      </DevOnly>
+    </template>
+    <template #form>
+      <form @submit.prevent="logItem">
+        <input type="text" v-model="form.search" name="search" id="search" :placeholder="`Search ${collection}`"/>
+        <button type="submit">Submit</button>
+      </form>
+    </template>
+    <template #accounts>
+      <li class="navigation__list--item">
+        <NuxtLink to="/blog" target="_blank">
+          Blogs
+        </NuxtLink>
+      </li>
+      <li class="navigation__list--item">
+        <NuxtLink to="/shop" target="_blank">
+          Shop
+        </NuxtLink>
+      </li>
+      <li class="navigation__list--item">
+        <NuxtLink to="https://bandcamp.com" target="_blank">Bandcamp</NuxtLink>
+      </li>
+      <li class="navigation__list--item">
+        <NuxtLink to="https://soundcloud.com" target="_blank">Soundcloud</NuxtLink>
+      </li>
+      <li class="navigation__list--item">
+        <NuxtLink to="https://spotify.com" target="_blank">Spotify</NuxtLink>
+      </li>
+    </template>
+  </Navigation>
+  <FeaturedMedia />
   <FlexContainer layout="row-reverse">
     <!--
     <Aside>
