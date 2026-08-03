@@ -4,8 +4,9 @@
     <ul class="navigation__list">
       <slot name="links"></slot>
     </ul>
+    <slot name="form"></slot>
     <ul class="navigation__list">
-      <slot name="account"></slot>
+      <slot name="accounts"></slot>
     </ul>
   </nav>
 </template>
