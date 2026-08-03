@@ -6,6 +6,7 @@ const layoutMap: Record<string, LayoutKey> = {
   "index": "home",
   "blog-genre": "blog",
   "blog-article": 'blog',
+  "library-collection": "blog",
   "shop": "shop"
 };
 
