@@ -1,4 +1,4 @@
-// @todo: Supprimer ce fichier
+// kazi: Supprimer ce fichier
 import { createClient } from "@sanity/client";
 
 const config = useRuntimeConfig();

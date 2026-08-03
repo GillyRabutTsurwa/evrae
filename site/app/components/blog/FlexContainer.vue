@@ -3,7 +3,7 @@ import type { CSSProperties } from 'vue';
 
 interface Props {
     layout: "row" | "row-reverse" | "column" | "column-reverse";
-    // @todo - adjuster les types pour ces propriétés ci-dessous
+    // kazi - adjuster les types pour ces propriétés ci-dessous
     contentJustify?: string;
     itemsAlign?: string;
 }

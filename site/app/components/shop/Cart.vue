@@ -2,7 +2,7 @@
 import { useCartStore } from "~/stores/cart";
 import { useProductsStore } from "~/stores/products";
 
-// @todo: Come up with a more imaginative greeting
+// kazi: Come up with a more imaginative greeting
 
 const cartStore = useCartStore();
 const productsStore = useProductsStore();
@@ -43,13 +43,13 @@ cartStore.$subscribe((_, state) => {
   isCartOpen.value = state.cartStatus;
 });
 
-//  @todo: Test For Action
+//  kazi: Test For Action
 
 const clearCart = () => {
   if (productsStore.productsInCart !== 0) productsStore.$patch({ productsInCart: [] });
 };
 
-// @todo: Come up with ANOTHER a more imaginative greeting
+// kazi: Come up with ANOTHER a more imaginative greeting
 // Everyone uses hello world and it's boring.
 // trying to create a new issue, WITH labels
 // labels: enhancement, help wanted, testing

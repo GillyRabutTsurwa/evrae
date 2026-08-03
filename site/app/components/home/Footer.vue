@@ -185,7 +185,7 @@ onMounted(() => {
       display: flex;
       flex-direction: column;
 
-      //@todo: adjust css code to be cleaner later
+      //kazi: adjust css code to be cleaner later
       & > *:not(:last-child) {
         margin-bottom: 1rem;
       }
@@ -233,7 +233,7 @@ onMounted(() => {
         }
       }
 
-      // @todo: refactor this repetitive code (above)
+      // kazi: refactor this repetitive code (above)
       &.email {
         img {
           height: 1.5rem;

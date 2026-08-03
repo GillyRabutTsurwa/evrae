@@ -53,7 +53,7 @@ const myClasses = ["personal", "tech"];
   }
 }
 
-// @todo: address duplicate code for personal and tech blocks. put them in mixins
+// kazi: address duplicate code for personal and tech blocks. put them in mixins
 
 .personal {
   grid-column: 1 / 2;

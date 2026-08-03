@@ -8,9 +8,11 @@
 // }
 
 // fetchPosts();
+import Post from "~~/models/posts";
 
-export default defineEventHandler(() => {
+export default defineEventHandler(async () => {
+  const posts = await Post.find();
     return {
-        message: "salut",
+        message: posts
     };
 });

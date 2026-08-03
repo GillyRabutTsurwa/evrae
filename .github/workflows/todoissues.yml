@@ -19,7 +19,7 @@ jobs:
                   AUTO_ASSIGN: true
                   IDENTIFIERS: '[
                     {
-                      "name": "@todo",
+                      "name": "kazi",
                       "labels": ["todo"]
                     }
                   ]'

@@ -78,7 +78,7 @@ const age = Math.floor((currentDate - birthday) / 31557600000);
   }
 }
 
-// @todo: modify styles and move all this code dessous
+// kazi: modify styles and move all this code dessous
 .link__blog {
   font-weight: bold;
   text-decoration: none;

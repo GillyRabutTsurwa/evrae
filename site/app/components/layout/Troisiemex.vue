@@ -64,7 +64,7 @@ const showBackend = () => {
   }
 }
 
-//@todo: refactor and move this
+//kazi: refactor and move this
 .header__button {
   display: inline-block;
   border: 2px solid #000;

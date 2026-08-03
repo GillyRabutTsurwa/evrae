@@ -11,7 +11,7 @@ onMounted(() => {
         /**
          * NOTE: delay navigation render
          * this is so that the navigation ne s'affiche sur le composant Loader
-         * @todo - make navigation transparent en filant
+         * kazi - make navigation transparent en filant
          */
         showNavigation.value = true;
     }, 2700);

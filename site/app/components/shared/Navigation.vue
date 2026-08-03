@@ -16,7 +16,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  /* @todo - investigater pourquoi ça ne marche pas sans "!important" */
+  /* kazi - investigater pourquoi ça ne marche pas sans "!important" */
   padding: 1.5rem 4rem !important;
   background-color: $colour-primary;
   margin-bottom: 2.5rem;

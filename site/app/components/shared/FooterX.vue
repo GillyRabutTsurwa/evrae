@@ -186,7 +186,7 @@ const currentYear: ComputedRef<number> = computed(() => {
       display: flex;
       flex-direction: column;
 
-      //@todo: adjust css code to be cleaner later
+      //kazi: adjust css code to be cleaner later
       & > *:not(:last-child) {
         margin-bottom: 1rem;
       }
@@ -234,7 +234,7 @@ const currentYear: ComputedRef<number> = computed(() => {
         }
       }
 
-      // @todo: refactor later
+      // kazi: refactor later
       &.email {
         img {
           height: 1.5rem;
