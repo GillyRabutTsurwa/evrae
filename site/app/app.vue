@@ -8,12 +8,12 @@ const layoutMap: Record<string, LayoutKey> = {
   "blog-article": 'blog',
   "library-collection": "blog",
   "shop": "shop"
-};
-
+}
 const layout: ComputedRef<LayoutKey> = computed(() => {
   const route_name = route.name as string;
   return layoutMap[route_name] || "default";
 });
+console.log(`nom de la route, c'est: ${route.name}`);
 </script>
 
 <template>
