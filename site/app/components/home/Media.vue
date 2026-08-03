@@ -6,13 +6,13 @@ const { mediaItems } = defineProps({
   }
 });
 const route = useRoute();
-const collection = route.params.collection;
+const { collection } = route.params;
 const { formatDate } = useFormatDate();
 const getSnippet = (text: string, limit: number = 300) => text.slice(0, limit) + "...";
 console.log(mediaItems);
 const catchValue = async (idValue, isCheckedValue) => {
   console.log(idValue, isCheckedValue);
-  const serverMedia = await $fetch(`http://localhost:4242/${subject}/favourites`, {
+  const serverMedia = await $fetch(`http://localhost:4242/${collection}/favourites`, {
     method: "POST",
     body: {
       id: idValue,
