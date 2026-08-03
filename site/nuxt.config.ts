@@ -1,29 +1,15 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-// FIX:
-// FIXME:
-// BUG:
-// WARN:
-// WARNING:
-// XXX:
-// PERF:
-// PERFORMANCE:
-// OPTIMIZE:
-// NOTE:
-// INFO:
-// TEST:
-// PASSED:
-// FAILED:
-// TODO:
-// todo:
-// kazi:
-// fixer:
-// rekebisha:
-//
 export default defineNuxtConfig({
   devtools: {
     enabled: false,
   },
   modules: ["@nuxtjs/sanity", "@nuxtjs/google-fonts", "@pinia/nuxt"],
+  image: {
+    sanity: {
+      projectId: process.env.SANITY_PROJECT_ID,
+      dataset: process.env.SANITY_ENV_PROD,
+    }
+  },
   sanity: {
     projectId: process.env.SANITY_PROJECT_ID,
     dataset: process.env.SANITY_ENV_PROD,
