@@ -87,7 +87,7 @@ images.games = Object.values(gameImages).map((currentGameImage) => currentGameIm
       font-size: 5.5rem;
       font-weight: bold;
       padding: 3rem 1.5rem;
-      background-color: rgba(31, 19, 21, 0.6);
+      background-color: rgba(31, 19, 21, 0.9);
       color: rgb(197, 197, 199);
 
       @include breakpoint(767) {
@@ -170,7 +170,7 @@ images.games = Object.values(gameImages).map((currentGameImage) => currentGameIm
       font-size: 5.5rem;
       font-weight: bold;
       padding: 3rem 1.5rem;
-      background-color: rgba(31, 19, 21, 0.6);
+      background-color: rgba(31, 19, 21, 0.9);
       color: rgb(197, 197, 199);
 
       @include breakpoint(767) {
