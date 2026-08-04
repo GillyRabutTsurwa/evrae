@@ -7,6 +7,7 @@ const layoutMap: Record<string, LayoutKey> = {
   "blog-genre": "blog",
   "blog-article": 'blog',
   "library-collection": "blog",
+  "library-collection-explore": "blog",
   "shop": "shop"
 }
 const layout: ComputedRef<LayoutKey> = computed(() => {
