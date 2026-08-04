@@ -54,10 +54,13 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .pagination-list {
+  width: 50%;
+  margin: 0 auto 3rem auto;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 3rem;
+  overflow-x: scroll;
 
   &__item {
     &:not(:last-child) {
