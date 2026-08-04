@@ -40,7 +40,7 @@ const catchValue = async (idValue, isCheckedValue) => {
             <p v-else>Description non disponible</p>
           </div>
           <div class="buttons">
-            <Button isLink :path="`/anime/${currentItem.mal_id}`" text="Read More"/>
+            <Button isLink :path="`/library/${collection}/${currentItem.mal_id}`" text="Read More"/>
           </div>
         </div>
       </div>
@@ -60,7 +60,7 @@ const catchValue = async (idValue, isCheckedValue) => {
             <p v-if="currentItem.summary">{{ getSnippet(currentItem.summary, 100) }}</p>
             <p v-else>Description non disponible</p>
           </div>
-          <Button isLink :path="`/games/${currentItem.id}`" text="More Info"/>
+          <Button isLink :path="`/library/${collection}/${currentItem.id}`" text="More Info"/>
         </div>
       </div>
     </template>
