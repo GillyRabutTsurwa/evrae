@@ -77,12 +77,6 @@ console.log(currentItems.value);
         </li>
       </DevOnly>
     </template>
-    <template #form>
-      <form @submit.prevent="logItem">
-        <input type="text" v-model="form.search" name="search" id="search" :placeholder="`Search ${collection}`"/>
-        <button type="submit">Submit</button>
-      </form>
-    </template>
     <template #accounts>
       <li class="navigation__list--item">
         <NuxtLink to="/blog" target="_blank">
