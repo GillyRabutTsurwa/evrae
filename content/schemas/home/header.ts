@@ -8,29 +8,14 @@ export default defineType({
 
   fields: [
     defineField({
-      name: "name",
-      title: "First Name",
+      name: "title",
+      title: "Title",
       type: "string",
     }),
     defineField({
-      name: "middleName",
-      title: "Middle Name",
+      name: "subtitle",
+      title: "Subtitle",
       type: "string",
-    }),
-    defineField({
-      name: "surname",
-      title: "Surname",
-      type: "string",
-    }),
-
-    defineField({
-      name: "portraits",
-      title: "Portrait Images",
-      type: "array",
-      of: [{ type: "image" }],
-      //   options: {
-      //     hotspot: true,
-      //   },
-    }),
+    })
   ],
 });
