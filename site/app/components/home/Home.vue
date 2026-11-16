@@ -61,7 +61,7 @@ const { data: blogs } = await useSanityQuery<PostInt[]>(postQuery);
     }
 }
 
-// NOTEIMPORTANT: this is for the instance of the spinner component in this component.
+// NOTE: this is for the instance of the spinner component in this component.
 // i am overwriting the normal height
 .loader {
     height: 100vh;
