@@ -5,7 +5,7 @@ const props = defineProps({
     type: Object as PropType<Home | null>,
     required: true
   }
-})
+});
 
 const randomPhoto = computed(() => {
   if (!props.content) return;
@@ -17,6 +17,9 @@ const randomPhoto = computed(() => {
     url: randomImgURL
   }
 });
+
+//TEST:
+console.log(props.content);
 </script>
 
 <template>
@@ -26,11 +29,9 @@ const randomPhoto = computed(() => {
     </figure>
     <div class="header__title">
       <h1 class="header__title--primary">
-        <span>{{ props.content.header.name }}</span>
-        <span>{{ props.content.header.middleName }}</span>
-        <span>{{ props.content.header.surname }}</span>
+        <span>{{ props.content.header.title }}</span>
       </h1>
-      <h2 class="header__title--secondary">Full Stack Developer</h2>
+      <h2 class="header__title--secondary">{{ props.content.header.subtitle }}</h2>
     </div>
     <FlexContainer layout="row" contentJustify="start" itemsAlign="start" class="flex-container-custom">
       <Button to="/blog" isLink text="Read Blogs" colourPrimary="#e6b376" colourSecondary="#101d2c" class="btn-test" />
@@ -116,13 +117,19 @@ const randomPhoto = computed(() => {
     }
 
     &--primary {
-      font-size: 12rem;
+      font-size: 17rem;
       font-weight: 600;
+      color: $colour-secondary;
       padding-left: 1rem;
       background-color: $colour-primary;
       //TESTING
       opacity: 1;
       transition: all 2.5s ease;
+
+      ::selection {
+        color: $colour-primary;
+        background-color: $colour-secondary;
+      }
 
       @include breakpoint(767) {
         margin-top: 4rem;
@@ -147,7 +154,8 @@ const randomPhoto = computed(() => {
       display: inline-block;
       padding: 1.5rem;
       font-size: 7rem;
-      background-color: $colour-primary;
+      color: $colour-primary;
+      background-color: $colour-secondary;
     }
   }
 
