@@ -13,7 +13,7 @@ const props = defineProps({
 
 const state = reactive({
   currentPosts: []
-})
+});
 
 const populatePosts = () => {
   store.posts = props.posts;
@@ -25,8 +25,7 @@ const categoriesList: ComputedRef<string[]> = computed(() => {
   return [...new Set(categories.flat())].filter((currentValue) => currentValue !== undefined);
 });
 
-//PASS: it works
-const x = computed(() => {
+const renderedCategories = computed(() => {
   return categoriesList.value.filter((currentCategory) => getNumOfPostsByCategory(currentCategory) > 1);
 });
 
@@ -35,12 +34,13 @@ function getNumOfPostsByCategory(category: string): number {
 }
 
 watch(() => state.currentPosts, (newValue: Array<string>, _) => {
+  console.log(newValue);
   store.filteredPosts = store.posts.filter((currentPost: PostInt) => {
     return currentPost.categories.some((currentCategory: string) => {
       return [...newValue].includes(currentCategory);
     });
   });
-
+  console.log(store.filteredPosts);
   if (state.currentPosts.length === 0) populatePosts();
 });
 </script>
@@ -49,7 +49,7 @@ watch(() => state.currentPosts, (newValue: Array<string>, _) => {
   <div class="category">
     <h4 class="category__title">Categories</h4>
     <ul class="category__list">
-      <li v-for="currentCategory in x" :key="currentCategory">
+      <li v-for="currentCategory in renderedCategories" :key="currentCategory">
         <input type="checkbox" :id="currentCategory" :value="currentCategory" v-model="state.currentPosts">
         <label :for="currentCategory">
           <span>{{ currentCategory }}</span>
